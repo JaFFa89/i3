@@ -15,4 +15,13 @@ class Auto:
         for passenger in self.passengers:
             print(passenger.name)
 
-sasha = Human('Sasha')
+job_list = {
+"Java developer":
+{"salary":50, "gladness_less": 10 },
+"Python developer":
+{"salary":40, "gladness_less": 3 },
+"C++ developer":
+{"salary":45, "gladness_less": 25 },
+"Rust developer":
+{"salary":70, "gladness_less": 1 },
+}
