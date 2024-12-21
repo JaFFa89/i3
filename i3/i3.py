@@ -1,27 +1,37 @@
-class Human:
-    def __init__(self, name="Human"):
+class Animal:
+    def __init__(self, name):
         self.name = name
 
-class Auto:
-    def __init__(self, brand):
-        self.brand = brand
-        self.passengers = []
+    def sound(self):
+        print(f"{self.name} дає звук")
 
-    def add_passenger(self, human):
-        self.passengers.append(human)
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
 
-    def print_passengers_names(self):
-        print(f"Names of {self.brand} passengers:")
-        for passenger in self.passengers:
-            print(passenger.name)
+    def sound(self):
+        print(f"{self.name} гавкає")
 
-job_list = {
-"Java developer":
-{"salary":50, "gladness_less": 10 },
-"Python developer":
-{"salary":40, "gladness_less": 3 },
-"C++ developer":
-{"salary":45, "gladness_less": 25 },
-"Rust developer":
-{"salary":70, "gladness_less": 1 },
-}
+    def a(self):
+        print(f"{self.name} приносить палку")
+
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name)
+        self.color = color
+
+    def sound(self):
+        print(f"{self.name} мяукая")
+
+    def b(self):
+        print(f"{self.name} карабкається на дерево")
+
+dog = Dog("пончик", "хаски")
+cat = Cat("мурка", "білий")
+
+dog.sound()
+dog.a()
+
+cat.sound()
+cat.b()
